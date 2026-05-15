@@ -185,6 +185,8 @@ img.movingback{
 
 img.large{
     justify-self: center;
+    left: 0;
+    right: 0;
     max-width: 500px; /* can edit this. 500-800px recommended */
     width: 100%;
     max-height: 500px;
