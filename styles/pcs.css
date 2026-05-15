@@ -1,0 +1,357 @@
+/* This file only contains the default shared styling that will apply to documents.
+See the styles section in each HTML file for page-specific styles. */
+
+/* THEME COLORS */
+:root{
+    --bar-color: black; /* can edit this */
+    --bar-text-color: white; /* can edit this */
+}
+
+
+/* TOPBAR & GENERAL PRESETS */
+
+html{
+    font-size:22px; /* can edit this, but be sure it is legible enough */
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* can edit this */
+    background-color: black;
+    transition: 1s;
+    @starting-style {background-color:unset;}
+}
+
+.bar{
+    color:var(--bar-text-color);
+    position: fixed; /* can edit this for bar behavior: fixed or absolute */
+    z-index: 1;
+    transition: 0.5s;
+}
+div.bar{
+    background-color: var(--bar-color);
+    width:100vw;
+    height:56px;
+    padding-left:5px;
+    padding-top:5px;
+    padding-bottom: 0;
+    justify-self: left;
+    left: 0%;
+    top: 0%;
+    display: block;
+    margin: 0;
+    box-shadow: 0px 0px 7px black; /* can edit this */
+}
+
+button.bar{
+    top:-5.5px;
+    right:4px;
+    font-size: 60px;
+    justify-self:right;
+    border: none;
+    background-color: transparent;
+    display: block;
+    font-family: serif;
+}
+button.bar:hover{
+    text-shadow: 1px 1px 3px currentColor;
+    cursor: pointer;
+}
+
+i.bar{
+    font-size: 40px; /* can edit this to fit well on bar */
+    top:5px;
+    justify-self:center;
+    right: 0px;
+    left: 5px;
+    display: block;
+    @starting-style{
+        translate: 0 -80px;
+    }
+}
+i.bar:hover{
+    text-shadow: 1px 1px 3px currentColor;
+    cursor: pointer;
+    display: inline;
+}
+
+img.bar{
+    height: 50.5px;
+    cursor: pointer;
+}
+
+footer{
+    background-color: dimgray; /* can edit this */
+    color: lightgrey; /* can edit this */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 18px; /* can edit this */
+    position:static;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px 0px 5px grey; /* can edit this */
+    u:hover{
+    cursor: pointer;
+    }
+}
+
+a{
+    color: inherit;
+}
+a:hover{
+    text-shadow: 1px 1px 3px currentColor;
+    cursor: pointer;
+}
+
+summary{
+    cursor: pointer;
+}
+
+summary.category{
+    width: 100;
+    background-color: dimgray;
+    color: white;
+    font-size: 30px;
+    position: sticky;
+    top: 60px;
+    padding: 5px;
+    text-align: center;
+    font-style: italic;
+    border-bottom: black 2px solid;
+}
+summary.category:hover{
+    text-shadow: 1px 1px 2px currentColor;
+    transition: 1s;
+}
+
+/* CUSTOMIZABLE DIVs: May add as many variations of div.___ as needed */
+
+div{ /* default div */
+    background-color: white; /* can edit this */
+    color: black; /* can edit this */
+    padding-left:20px;
+    padding-right: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    width: 100;
+}
+div.vh{
+    height: 100vh;
+    background-color: transparent;
+    color: white; /* can edit this */
+    text-shadow: 3px 3px 3px black; /* can edit this */
+}
+div.dark{
+    background-color:gray; /* can edit this */
+    color: white; /* can edit this */
+}
+
+div.grey{
+    background-color:lightgray; /* can edit this */
+    color: black; /* can edit this */
+}
+
+div.light{
+    background-color:whitesmoke; /* can edit this */
+    color: black; /* can edit this */
+}
+
+/* IMAGE ELEMENTS */
+
+.fixedback{
+    opacity: 65%; /* can edit this. controls darkness of img */
+    margin: 0px;
+    overflow: hidden;
+    width: 100%;
+    height:100%;
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+}
+
+img.movingback{
+    opacity: 65%; /* can edit this. controls darkness of img */
+    margin: 0;
+    overflow: hidden;
+    width: 100%;
+    height:100%;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+    position:absolute;
+    display: block;
+}
+
+img.large{
+    justify-self: center;
+    max-width: 500px; /* can edit this. 500-800px recommended */
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    display: block;
+    border: solid black 0px; /* can edit this */
+    margin-bottom: 10px; /* can edit this */
+}
+
+/* LIBRARY GRID CUSTOMIZATIONS */
+
+section.grid{
+    background-color: white; /* can edit this */
+    z-index: -1;
+    justify-content: space-evenly;
+}
+
+div.grid{
+    border: hidden;
+    background-color: transparent;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 1%;
+    padding-right: 1%;
+    width: min-content;
+    display: inline-grid;
+    top:0;
+    justify-self: center;
+    left: 0;
+    width: fit-content;
+    background-color: transparent; /* can edit this but transparent recommended */
+}
+div.grid:hover{
+    transition: 0.5s;
+    box-shadow: 2px 2px 10px grey; /* can edit this */
+    cursor: pointer;
+}
+@media screen and (min-width: 500px) and (max-width: 799px){
+    div.grid{
+        width: 47.34%;
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 1099px){
+    div.grid{
+        width: 30.78%;
+    }
+}
+@media screen and (min-width: 1100px){
+    div.grid{
+        width: 22.55%;
+    }
+}
+
+img.grid{
+    aspect-ratio: 1/1; /* can edit this: width/height */
+    margin: 0; /* can edit this */
+    width: 100%; /* can edit this: either width or height, not both */
+    object-fit: cover; /* can set this to: cover or contain */
+    overflow: hidden;
+}
+img.grid:active{
+    object-fit: contain;
+}
+@media screen and (min-width: 500px){
+    img.large:hover{
+        cursor: pointer;
+    }
+    img.large:active{
+        transition: 0.5s;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-self: center;
+        object-fit:scale-down;
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        aspect-ratio: initial;
+        margin: 0;
+        padding: 0;
+    }
+    img.grid:active{ /* disable if library items are clickable buttons */
+        transition: 0.5s;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-self: center;
+        object-fit:scale-down;
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        aspect-ratio: initial;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* GALLERY NON GRID FORMAT CUSTOMIZATIONS */
+
+section.gallery{
+    background-color: white; /* can edit this */
+    z-index: -1;
+    justify-self: center;
+    left: 0;
+    right: 0;
+    display: block;
+    padding: 1%;
+    width: auto;
+    max-width: 600px;
+    padding-left: max(calc((100vw - 600px)/2));
+    padding-right: max(calc((100vw - 600px)/2));
+}
+
+img.s, img.v, img.h, img.l{
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    object-fit: cover;
+    width: 49%;
+    top: 0;
+}
+
+img.s{
+    aspect-ratio: 1/1;
+}
+img.v{
+    aspect-ratio: 1/2;
+}
+img.h{
+    aspect-ratio: 2/1;
+    width: 99.4%;
+}
+img.l{
+    aspect-ratio: 1/1;
+    width: 99.4%;
+}
+@media screen and (min-width: 500px){
+    img.s:hover, img.v:hover, img.h:hover, img.l:hover{
+        cursor: pointer;
+        box-shadow: 2px 2px 10px transparent; /* can edit this */
+    }
+    img.s:active, img.v:active, img.h:active, img.l:active{
+        transition: 0.5s;
+        display: block;
+        position: fixed;
+        top: 0;
+        align-self:left;
+        left: 0;
+        object-fit:scale-down;
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        aspect-ratio: initial;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* DO NOT EDIT ONES BELOW*/
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}

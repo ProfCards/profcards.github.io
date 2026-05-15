@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/pcs.css">
+    <link rel="icon" type="image" href="img/pcs-logo-1.png">
+</head>
+
+<style>
+/* Only change colors below. */
+    div#sidemenu{
+        color: var(--bar-text-color); /* can edit this */
+        background-color: transparent;
+        justify-self: right;
+        transition: 0.4s;
+        @starting-style {translate: 0 -100vh;}
+    }
+    button#sidemenu{
+        top: 0px;
+        right:2px;
+        font-size:48px;
+        transition:1s;
+    }
+    section#sidemenu{
+        right: 0;
+        left: 0;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--bar-color); /* can edit this */
+        position: fixed;
+        bottom: 0;
+        z-index: -1;
+        transition: 0.4s;
+        @starting-style {translate: 0 -100vh;}
+    }
+
+/* Do not change ones below if possible.*/
+    p{
+        font-size:30px;
+        font-style: italic;
+    }
+    p:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    summary{
+        font-size:30px;
+        cursor: pointer;
+    }
+    summary:hover{
+        text-shadow: 1px 1px 3px currentColor;
+    }
+    details{
+        margin-top: 30px;
+    }
+    .bar{
+        transition: none;
+    }
+    i.bar{
+        transition: 0.5s;
+        @starting-style {translate: 0 0; opacity: 0;}
+    }
+/*Footer appearance customization below*/
+    footer{
+        position:fixed; /* can edit this: sticky or static */
+        transition: 0.5s;
+        @starting-style {translate: 0 100vh;}
+    }
+</style>
+
+<header>
+    <title>Menu - PCS</title>
+    <div class="bar"><img src="img/pcs-logo-1.png" alt="logo" class="bar" onclick="window.location.href='index.html'"></div>
+    <button onclick="window.history.back()" class="bar" id="sidemenu">⨉</button>
+    <i class="bar" onclick="window.scrollTo(0,0)">Menu</i>
+    <br>
+</header>
+
+<section id="sidemenu">
+</section>
+<br>
+<div id="sidemenu">
+    <p onclick="window.location.href='index.html'">Today at PCS</p>
+    <p>About the Organization</p>
+    <p>Join / Contact Us</p>
+    <hr>
+    <p>Original Card Games</p>
+    <p>Purchase a Game</p>
+    <details name="sidemenu">
+        <summary>Learn Game Details</summary>
+        <p>The Psychotic Series</p>
+        <p>HEXA Personality CCG</p>
+        <p>Vegetation Contention</p>
+    </details>
+    <br><hr>
+    <p>Education Resources</p>
+    <p>Order / Get Materials</p>
+    <details name="sidemenu">
+        <summary>All Resource Details</summary>
+        <p>Basic Musical Dice</p>
+    </details>
+    <br><hr>
+    <p>Our Terms & Policy</p>
+    <p>View the O.D.C. Website</p>
+</div>
+<br><br><br><br>
+<footer>
+    <b>© 2026 Profile Cards Society</b>
+    <br>
+    <i>All Rights Reserved.</i> | <u onclick="window.location.href=''">Terms & Policy</u>
+</footer>
+</html>
