@@ -250,6 +250,16 @@ img.grid{
 img.grid:active{
     object-fit: contain;
 }
+
+/* DO NOT EDIT ONE BELOW*/
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
 /*
 @media screen and (min-width: 500px){
     img.large:hover{
@@ -355,12 +365,3 @@ img.l{
     }
 }
 */
-
-/* DO NOT EDIT ONES BELOW*/
-
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-}
