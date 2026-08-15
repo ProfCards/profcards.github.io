@@ -116,6 +116,7 @@ summary.category{
     text-align: center;
     font-style: italic;
     border-bottom: black 2px solid;
+    z-index:1;
 }
 summary.category:hover{
     text-shadow: 1px 1px 2px currentColor;
