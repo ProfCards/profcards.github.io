@@ -250,6 +250,7 @@ img.grid{
 img.grid:active{
     object-fit: contain;
 }
+/*
 @media screen and (min-width: 500px){
     img.large:hover{
         cursor: pointer;
@@ -271,6 +272,7 @@ img.grid:active{
         padding: 0;
     }
     img.grid:active{ /* disable if library items are clickable buttons */
+/*
         transition: 0.5s;
         display: block;
         position: fixed;
@@ -287,6 +289,7 @@ img.grid:active{
         padding: 0;
     }
 }
+*/
 
 /* GALLERY NON GRID FORMAT CUSTOMIZATIONS */
 
@@ -327,11 +330,13 @@ img.l{
     aspect-ratio: 1/1;
     width: 99.4%;
 }
+/*
 @media screen and (min-width: 500px){
     img.s:hover, img.v:hover, img.h:hover, img.l:hover{
         cursor: pointer;
         box-shadow: 2px 2px 10px transparent; /* can edit this */
     }
+/*
     img.s:active, img.v:active, img.h:active, img.l:active{
         transition: 0.5s;
         display: block;
