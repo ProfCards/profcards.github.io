@@ -97,8 +97,10 @@ a{
     color: inherit;
 }
 a:hover{
-    text-shadow: 1px 1px 3px currentColor;
     cursor: pointer;
+}
+a.link:hover{
+    text-shadow: 1px 1px 3px currentColor;
 }
 
 summary{
